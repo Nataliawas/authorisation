@@ -20,7 +20,8 @@ class Register extends Component {
             .catch(error => {
                 console.error(`Error: ${error.code} ${error.message}`)
             })
-        this.setState({ email: '', password: '' })
+            console.log(this.state)
+        this.setState({ email: "", password:"" })
         event.preventDefault()
 
     }
@@ -39,7 +40,7 @@ class Register extends Component {
                         <input onChange={this.handleChange} type="password" name="password" placeholder="Password" value={this.state.password} />
                     </div>
                     <div>
-                        <input onChange={this.handleChange} type="submit" value="Submit" />
+                        <input type="submit" value="Submit" />
                     </div>
                 </form>
             </div>
